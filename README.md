@@ -28,8 +28,8 @@ import { IntersectionObserver } from "inteobs";
 
 ### Caveats
 
-One difference between this module and the official polyfill is that - due to being a ponyfill - [a missing method in Edge 15](https://github.com/w3c/IntersectionObserver/issues/211) (`isIntersecting`) cannot be patched.
-However - the method in question is not at all essential for Intersection Observer to work (it can be worked around).
+One difference between this module and the official polyfill is that - due to being a ponyfill - [a missing property in Edge 15](https://github.com/w3c/IntersectionObserver/issues/211) (`isIntersecting`) cannot be patched.
+However - the property in question is not at all essential for Intersection Observer to work (it can be worked around).
 
 ### Credits
 
