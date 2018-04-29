@@ -26,7 +26,7 @@ module.exports = function({ types: t }) {
 					program.node.body = node.body.body;
 				}
 			},
-			// translate if-statement into variable and exports
+			// translate if-statement into variable and default export
 			IfStatement(path) {
 				var { node } = path;
 				if (
@@ -34,10 +34,19 @@ module.exports = function({ types: t }) {
 				) {
 					var ast = template.smart.ast`
 						var hasSupport = typeof window !== 'undefined' && ${ node.test };
-						exports = hasSupport ? window.IntersectionObserver : IntersectionObserver;
-						exports.IntersectionObserver = IntersectionObserver;
+						export default hasSupport ? window.IntersectionObserver : IntersectionObserver;
 					`;
 					path.replaceWithMultiple(ast);
+				}
+			},
+			// named export
+			FunctionDeclaration(path) {
+				var { node } = path;
+				if (
+					node.id && node.id.name === "IntersectionObserver"
+				) {
+					path.replaceWith(t.exportNamedDeclaration(node, []));
+					path.stop();
 				}
 			},
 			// remove global exposure
