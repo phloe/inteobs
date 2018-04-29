@@ -4,7 +4,7 @@
 
 This module will help you get to use the goodness of [Intersection Observer](https://w3c.github.io/IntersectionObserver/) without affecting builtins.
 
-The name is a playful contraction on Intersection Observer to __inte-obs__ [ˈɪnˌtɛ-əbz] (first part in swedish meaning __not__ - and then "obs" - so "not-observer").
+The name is a playful contraction of Intersection Observer to __inte-obs__ [ˈɪnˌtɛ-əbz] (first part in swedish meaning __not__ - and then "obs" - so "not-observer").
 
 ### Install
 
@@ -18,12 +18,6 @@ The default export of the package is either a reference to the native `window.In
 
 ```
 import IntersectionObserver from "inteobs";
-```
-
-The js implementation is also exposed as a named export `IntersectionObserver`:
-
-```
-import { IntersectionObserver } from "inteobs";
 ```
 
 ### Caveats

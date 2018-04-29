@@ -39,16 +39,6 @@ module.exports = function({ types: t }) {
 					path.replaceWithMultiple(ast);
 				}
 			},
-			// named export
-			FunctionDeclaration(path) {
-				var { node } = path;
-				if (
-					node.id && node.id.name === "IntersectionObserver"
-				) {
-					path.replaceWith(t.exportNamedDeclaration(node, []));
-					path.skip();
-				}
-			},
 			// remove global exposure
 			ExpressionStatement(path) {
 				var { node } = path;

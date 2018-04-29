@@ -4,7 +4,7 @@
   "description": "A ponyfill based on the w3c/IntersectionObserver polyfill",
   "main": "index.js",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "babel ./node_modules/intersection-observer/intersection-observer.js -o ./index.js"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/rasmusfl0e/inteobs#readme",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.46",
     "@babel/template": "^7.0.0-beta.46",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "intersection-observer": "^0.5.0"
   }
 }
