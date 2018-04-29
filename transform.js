@@ -46,7 +46,7 @@ module.exports = function({ types: t }) {
 					node.id && node.id.name === "IntersectionObserver"
 				) {
 					path.replaceWith(t.exportNamedDeclaration(node, []));
-					path.stop();
+					path.skip();
 				}
 			},
 			// remove global exposure
