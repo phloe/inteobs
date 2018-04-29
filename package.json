@@ -1,0 +1,28 @@
+{
+  "name": "inteobs",
+  "version": "1.0.1",
+  "description": "A ponyfill based on the w3c/IntersectionObserver polyfill",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rasmusfl0e/inteobs.git"
+  },
+  "keywords": [
+    "ponyfill",
+    "intersectionobserver"
+  ],
+  "author": "rasmusfl0e",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rasmusfl0e/inteobs/issues"
+  },
+  "homepage": "https://github.com/rasmusfl0e/inteobs#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/template": "^7.0.0-beta.46",
+    "intersection-observer": "^0.5.0"
+  }
+}
