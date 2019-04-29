@@ -1,6 +1,6 @@
 {
   "name": "inteobs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A ponyfill based on the w3c/IntersectionObserver polyfill",
   "main": "index.js",
   "scripts": {
@@ -25,6 +25,6 @@
     "babel-cli": "^6.26.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "intersection-observer": "^0.5.0"
+    "intersection-observer": "^0.5.1"
   }
 }
